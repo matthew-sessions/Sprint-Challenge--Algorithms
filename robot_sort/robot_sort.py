@@ -122,11 +122,11 @@ class SortingRobot:
                 move = 'left'
         print(self._position)
         print(self._item)
-        for i in self._list:
+        for i in range(len(self._list)):
             if self.can_move_left() == True:
                 self.move_left()
-        for i in self._list:
-            if i == None:
+        for i in range(len(self._list)):
+            if self.compare_item() == None:
                 self.swap_item()
                 break
             if self.can_move_right() == True:
